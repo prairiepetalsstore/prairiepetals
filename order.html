@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Flowers - Prairie Petals</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #fffafc; }
+    h1 { color: #a80050; }
+    form { max-width: 500px; }
+    label { font-weight: bold; display: block; margin-top: 15px; }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #a80050;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Order Flowers</h1>
+  <form action="https://formsubmit.co/prairiepetalsstore@gmail.com" method="POST">
+    <!-- Replace YOUR_EMAIL_HERE with your real email -->
+
+    <label>Recipient's Name:</label>
+    <input type="text" name="recipient_name" required>
+
+    <label>Recipient Address:</label>
+    <input type="text" name="recipient_address" placeholder="Street address" required>
+    <input type="text" name="recipient_city" placeholder="City" required>
+    <input type="text" name="recipient_province" placeholder="Province" required>
+    <input type="text" name="recipient_postal" placeholder="Postal Code" required>
+    <input type="tel" name="recipient_phone" placeholder="Phone Number" required>
+
+    <label>Sender's Name:</label>
+    <input type="text" name="sender_name" required>
+
+    <label>Billing Address:</label>
+    <input type="text" name="billing_address" placeholder="Street address" required>
+    <input type="text" name="billing_city" placeholder="City" required>
+    <input type="text" name="billing_province" placeholder="Province" required>
+    <input type="text" name="billing_postal" placeholder="Postal Code" required>
+    <input type="tel" name="sender_phone" placeholder="Phone Number" required>
+
+    <label>Payment Info:</label>
+    <input type="text" name="card_number" placeholder="Visa/MC Card Number #### #### #### ####" required>
+    <input type="text" name="exp_date" placeholder="Exp Date MM/YY" required>
+    <input type="tel" name="cvv" placeholder="CVV ###" required>
+    
+    <label>Choose Flower Product:</label>
+    <select name="product" required>
+      <option value="">-- Select --</option>
+      <option value="Rose Delight - $39.99">Rose Delight - $39.99</option>
+      <option value="Sunflower Surprise - $29.99">Sunflower Surprise - $29.99</option>
+      <option value="Mixed Bloom Basket - $49.99">Mixed Bloom Basket - $49.99</option>
+    </select>
+
+    <label>Card Message (Optional):</label>
+    <textarea name="card_message" rows="4" placeholder="Write a message to be included with the flowers"></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</body>
+</html>
